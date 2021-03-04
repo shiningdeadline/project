@@ -1,0 +1,80 @@
+
+.tab-container {
+  position: relative;
+  height: 200px;
+  width: 870px;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(255, 247, 234, 0.95);
+
+}
+
+
+.tab {
+  position: relative;
+  bottom: -153px;
+  height: 47px;
+  width: 182px;
+  z-index: 9;
+  border-radius: 15px 15px 0px 0px;
+  background-color: purple;
+  opacity: 0.5;
+  transition: 2s ease-in-out;
+}
+
+.tab::after {
+      width: 870px;
+      height: 113px;
+      background-color: blue;
+      position: absolute;
+      bottom: -112px;
+      left: 0px;
+      content: '';
+      z-index: 3;
+}
+
+
+.a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 150px;
+  height: 19px;
+  background-color: rgba(54, 52, 49, 1);
+  border-radius: 15px 15px 0px 0px;
+  padding: 14px 16px;
+  font-size: 17px;
+  transition: 2s ease-in-out;
+}
+
+.b {
+  background-color: rgba(54, 52, 49, 1);
+  position: absolute;
+  bottom: -112px;
+  z-index: 3;
+  padding: 6px 0px;
+  height: 101px;
+  width: 870px;
+  transition: 2s ease-in-out;
+}
+
+/* Change background color of buttons on hover */
+.tab:hover {
+  bottom: -40px;
+  transition: 2s ease-in-out;
+}
+
+.tab:hover + .a {
+  cursor: pointer;
+  transition: 2s ease-in-out;
+  bottom: 112px;
+  display: block;
+}
+
+.tab:hover ~ .b {
+  cursor: pointer;
+  transition: 2s ease-in-out;
+  display: block;
+  bottom: 0;
+}
